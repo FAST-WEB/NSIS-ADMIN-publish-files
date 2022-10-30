@@ -1,0 +1,1271 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>통합 시스템 어드민(NSIS)</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="../assets/vendor/fontawesome/css/all.css" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template-->
+    <link href="../assets/css/sb-admin-2.css" rel="stylesheet">
+    <link href="../assets/css/common.css" rel="stylesheet">
+    <link href="../assets/css/ct-customs.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+    <div id="skip" class="sr-only sr-only-focusable">
+        <a href="#topGnbMenu">상단 메뉴 바로가기</a>
+        <a href="#sidebarNavMenu">사이드바 메뉴 바로가기</a>
+        <a href="#content">콘텐츠 바로가기</a>
+    </div>
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="sidebarNavMenu">
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                <!-- sidebar-brand-text -->
+                <div class="mx-3">LOGO</div>
+            </a>
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>대시보드</span>
+                </a>
+            </li>
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#navMenuSiteCollapse"
+                    aria-expanded="true" aria-controls="navMenuSite">
+                    <i class="fas fa-fw fa-wrench"></i>
+                    <span>사이트설정관리</span>
+                </a>
+                <div id="navMenuSiteCollapse" class="collapse" aria-labelledby="navMenuSiteHeader"
+                    data-parent="#sidebarNavMenu">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="./NSIS-M1.html">메뉴관리</a>html">메뉴관리</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#navMenuProgramCollapse"
+                    aria-expanded="true" aria-controls="navMenuProgram">
+                    <i class="fas fa-fw fa-window-restore"></i>
+                    <span>프로그램관리</span>
+                </a>
+                <div id="navMenuProgramCollapse" class="collapse show" aria-labelledby="navMenuProgramHeader"
+                    data-parent="#sidebarNavMenu">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item active" href="./NSIS-M2-1-1.html">게시판관리</a>
+                        <a class="collapse-item" href="./NSIS-M2-2-1.html">프로그램관리</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#navMenuAuthCollapse"
+                    aria-expanded="true" aria-controls="navMenuAuth">
+                    <i class="fas fa-fw fa-lock"></i>
+                    <span>권한관리</span>
+                </a>
+                <div id="navMenuAuthCollapse" class="collapse" aria-labelledby="navMenuAuthHeader"
+                    data-parent="#sidebarNavMenu">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="./NSIS-M3-1-1.html">메뉴권한관리</a>
+                        <a class="collapse-item" href="./NSIS-M3-2-1.html">시스템권한설정관리</a>
+                        <a class="collapse-item" href="./NSIS-M3-3-1.html">사용자그룹관리</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#navMenuUsersCollapse"
+                    aria-expanded="true" aria-controls="navMenuUsers">
+                    <i class="fas fa-fw fa-users"></i>
+                    <span>회원관리</span>
+                </a>
+                <div id="navMenuUsersCollapse" class="collapse" aria-labelledby="navMenuUsersHeader"
+                    data-parent="#sidebarNavMenu">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="./NSIS-M4-1-1.html">회원관리</a>
+                        <a class="collapse-item" href="./NSIS-M4-2-1.html">탈퇴회원관리</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#navMenuCodeCollapse"
+                    aria-expanded="true" aria-controls="navMenuCode">
+                    <i class="fas fa-fw fa-cube"></i>
+                    <span>코드관리</span>
+                </a>
+                <div id="navMenuCodeCollapse" class="collapse" aria-labelledby="navMenuCodeHeader"
+                    data-parent="#sidebarNavMenu">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="./NSIS-M5-1-1.html">공통코드관리</a>
+                        <a class="collapse-item" href="./NSIS-M5-2-1.html">용어사전관리</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#navMenuSystemCollapse"
+                    aria-expanded="true" aria-controls="navMenuSystem">
+                    <i class="fas fa-fw fa-cogs"></i>
+                    <span>시스템관리</span>
+                </a>
+                <div id="navMenuSystemCollapse" class="collapse" aria-labelledby="navMenuSystemHeader"
+                    data-parent="#sidebarNavMenu">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="./NSIS-M6-1-1.html">관리자접속IP관리</a>
+                        <a class="collapse-item" href="./NSIS-M6-2-1.html">계정정책관리</a>
+                        <a class="collapse-item" href="./NSIS-M6-3-1.html">개인정보취급이력관리</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#navMenuConfigCollapse"
+                    aria-expanded="true" aria-controls="navMenuConfig">
+                    <i class="fas fa-fw fa-sliders-h"></i>
+                    <span>기본설정관리</span>
+                </a>
+                <div id="navMenuConfigCollapse" class="collapse" aria-labelledby="navMenuConfigHeader"
+                    data-parent="#sidebarNavMenu">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="./NSIS-M7-1-1.html">기본설정관리</a>
+                        <a class="collapse-item" href="./NSIS-M7-2-1.html">SEO설정</a>
+                        <a class="collapse-item" href="./NSIS-M7-3-1.html">관련사이트설정</a>
+                        <a class="collapse-item" href="./NSIS-M7-4-1.html">약관설정</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#navMenuHistoryCollapse"
+                    aria-expanded="true" aria-controls="navMenuHistory">
+                    <i class="fas fa-fw fa-history"></i>
+                    <span>이력관리</span>
+                </a>
+                <div id="navMenuHistoryCollapse" class="collapse" aria-labelledby="navMenuHistoryHeader"
+                    data-parent="#sidebarNavMenu">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="./NSIS-M8-1-1.html">개인정보접속이력</a>
+                        <a class="collapse-item" href="./NSIS-M8-2-1.html">로그인이력관리</a>
+                        <a class="collapse-item" href="./NSIS-M8-3-1.html">접근통제이력</a>
+                        <a class="collapse-item" href="./NSIS-M8-4-1.html">시스템권한부여이력</a>
+                        <a class="collapse-item" href="./NSIS-M8-5-1.html">메뉴권한이력</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./NSIS-M9-1-1.html">
+                    <i class="fas fa-fw fa-user-cog"></i>
+                    <span>관리자정보수정</span>
+                </a>
+            </li>
+
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline mt-4">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+        </ul>
+        <!-- End of Sidebar -->
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column ct__w1200">
+            <!-- Main Content -->
+            <div id="content">
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow" id="topGnbMenu">
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link rounded-circle mr-3" aria-hidden="true">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <!-- Top Category Dropdown -->
+                    <div class="dropdown">
+                        <button class="btn btn-light dropdown-toggle" type="button" data-toggle="dropdown"
+                            aria-expanded="false">
+                            통합 시스템 어드민(NSIS)
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">1통합 시스템 어드민(NSIS)</a></li>
+                            <li><a class="dropdown-item" href="#">2통합 시스템 어드민(NSIS)</a></li>
+                            <li><a class="dropdown-item" href="#">3통합 시스템 어드민(NSIS)</a></li>
+                        </ul>
+                    </div>
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto align-items-center">
+                        <li class="nav-item d-flex justify-content-center align-items-center">
+                            <span class="ct__switch--handle mr-2" data-target="#workStatus" data-status-system="false"
+                                role="button">업무모드</span>
+                            <div class="custom-control custom-switch ct__switch--admin switch-lg mr-2">
+                                <input type="checkbox" class="custom-control-input" id="workStatus">
+                                <label class="custom-control-label" for="workStatus"></label>
+                            </div>
+                            <span class="ct__switch--handle" data-target="#workStatus" data-status-system="true"
+                                role="button">시스템모드</span>
+                        </li>
+                        <div class="topbar-divider d-none d-sm-block"></div>
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img class="img-profile rounded-circle" src="../assets/images/undraw_profile.svg"
+                                    alt="프로필 사진">
+                                <span class="mx-2 text-gray-600">홍길동</span>
+                                <span class="m-0 text-secondary small">(2022-01-01 13:00:33)</span>
+                            </a>
+                            <!-- Dropdown - User Information -->
+                            <div class="dropdown-menu dropdown-menu-left shadow animated--grow-in"
+                                aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-user-cog fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    관리자정보수정
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    로그아웃
+                                </a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" id="" role="button">
+                                <i class="fas fa-home fa-fw"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" id="" role="button">
+                                <i class="fas fa-sign-out-alt fa-fw"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- End of Topbar -->
+                <!-- Begin Page Content -->
+                <div class="container-fluid ct__w1200">
+                    <!-- Sub Page NavTab -->
+                    <div id="subPageTabs" class="d-flex justify-content-between align-items-center mb-4 pb-2">
+                        <ul class="nav nav-pills" id="subPageTab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link" id="subPageTab1" data-toggle="pill" href="#subPageContent1"
+                                    role="tab" aria-controls="subPageTab1" aria-selected="true">품명관리
+                                    <button class="nav-link-close btn btn-sm btn-circle ml-2" aria-label="탭 닫기"><i
+                                            class="fas fa-times"></i></button>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" id="subPageTab" data-toggle="pill" href="#subPageContent2"
+                                    role="tab" aria-controls="subPageContent2" aria-selected="false">신청현황
+                                    <button class="nav-link-close btn btn-sm btn-circle ml-2" aria-label="탭 닫기"><i
+                                            class="fas fa-times"></i></button>
+                                </a>
+                            </li>
+                        </ul>
+                        <button type="button" class="nav-link-close-all btn btn-outline-secondary btn-sm px-2"><i
+                                class="fas fa-times mr-2"></i>전체 닫기</button>
+                    </div>
+                    <!-- Page Heading -->
+                    <div class="d-flex mb-4 align-items-center justify-content-between">
+                        <h1 class="h3 mb-0 text-gray-800">신고유형별 현황 관리</h1>
+                        <ol class="breadcrumb mb-0">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item"><a href="#">수출입업무관리</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">신고유형별현황</li>
+                        </ol>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 mb-4">
+                            <div class="card shadow">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-center mb-3 text-center">
+                                        <ul class="nav nav-pills">
+                                            <li class="nav-item mr-1" style="width:160px;">
+                                                <a class="nav-link btn mb-1 active" href="#">접수</a>
+                                                <span>2022-10-12 12:48:35</span>
+                                            </li>
+                                            <li class="nav-item mr-1" style="width:160px;">
+                                                <a class="nav-link btn btn-outline-secondary mb-1" href="#">검토</a>
+                                            </li>
+                                            <li class="nav-item mr-1" style="width:160px;">
+                                                <a class="nav-link btn btn-outline-secondary mb-1" href="#">비용수납</a>
+                                            </li>
+                                            <li class="nav-item" style="width:160px;">
+                                                <a class="nav-link btn btn-outline-secondary mb-1" href="#">완료</a>
+                                                <span>2022-10-12 12:48:35</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="table-responsive mb-4">
+                                        <table
+                                            class="table table-light table-bordered ct__table-leftside fixed-max-content-table w-100"
+                                            id="" cellspacing="0">
+                                            <caption class="sr-only sr-only-focusable">신고유형별현황</caption>
+                                            <tbody>
+                                                <tr>
+                                                    <th class="col-2 text-center">
+                                                        <span class="">신고구분</span>
+                                                    </th>
+                                                    <td class="col-2">
+                                                        2022100513
+                                                    </td>
+                                                    <th class="col-2 text-center">
+                                                        <span class="">접수일자</span>
+                                                    </th>
+                                                    <td>
+                                                        2022-10-12 12:48:35
+                                                    </td>
+                                                    <th class="col-2 text-center">
+                                                        <span class="">선원구분</span>
+                                                    </th>
+                                                    <td>
+                                                        밀봉(유상)
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="col-2 text-center">
+                                                        <span class="">수입신고기관</span>
+                                                    </th>
+                                                    <td class="col-2">
+                                                    </td>
+                                                    <th class="col-2 text-center">
+                                                        <span class="">대표자</span>
+                                                    </th>
+                                                    <td>
+                                                    </td>
+                                                    <th class="col-2 text-center">
+                                                        <span class="">무역고유번호</span>
+                                                    </th>
+                                                    <td>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="col-2 text-center">
+                                                        <span class="">주소</span>
+                                                    </th>
+                                                    <td colspan="4">
+                                                        서울특별시 강남구 도곡로
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="col-2 text-center">
+                                                        <span class="">위탁기관/참조사항</span>
+                                                    </th>
+                                                    <td class="col-2">
+                                                        [00005] (주)부경S.M
+                                                    </td>
+                                                    <th class="col-2 text-center">
+                                                        <span class="">대표자</span>
+                                                    </th>
+                                                    <td>
+                                                    </td>
+                                                    <th class="col-2 text-center">
+                                                        <span class="">사업자등록번호</span>
+                                                    </th>
+                                                    <td>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="col-2 text-center">
+                                                        <span class="">선적항</span>
+                                                    </th>
+                                                    <td class="col-2">
+                                                    </td>
+                                                    <th class="col-2 text-center">
+                                                        <span class="">제작사</span>
+                                                    </th>
+                                                    <td>
+                                                    </td>
+                                                    <th class="col-2 text-center">
+                                                        <span class="">원산지</span>
+                                                    </th>
+                                                    <td>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="col-2 text-center">
+                                                        <span class="">가격조건</span>
+                                                    </th>
+                                                    <td class="col-2">
+                                                    </td>
+                                                    <th class="col-2 text-center">
+                                                        <span class="">제경비</span>
+                                                    </th>
+                                                    <td>
+                                                    </td>
+                                                    <th class="col-2 text-center">
+                                                        <span class="">금액</span>
+                                                    </th>
+                                                    <td>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="col-2 text-center">
+                                                        <span class="">1,2등급 보안관리</span>
+                                                    </th>
+                                                    <td class="col-2">
+                                                    </td>
+                                                    <th class="col-2 text-center">
+                                                        <span class="">수입예정일</span>
+                                                    </th>
+                                                    <td colspan="3">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="col-2 text-center">
+                                                        <span class="">비고</span>
+                                                    </th>
+                                                    <td colspan="4">
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                        <table
+                                            class="table table-light table-bordered ct__table-leftside fixed-max-content-table w-100"
+                                            id="" cellspacing="0">
+                                            <caption class="sr-only sr-only-focusable">신고유형별현황 용도정보</caption>
+                                            <tbody>
+                                                <tr>
+                                                    <th class="col-2 text-center">
+                                                        <span class="">용도</span>
+                                                    </th>
+                                                    <td class="col-2">
+                                                        의료
+                                                    </td>
+                                                    <th class="col-2 text-center">
+                                                        <span class="">용도설명</span>
+                                                    </th>
+                                                    <td>
+                                                    </td>
+                                                    <th class="col-2 text-center">
+                                                        <span class="">용도선택</span>
+                                                    </th>
+                                                    <td>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                        <table
+                                            class="table table-light table-bordered ct__table-leftside fixed-max-content-table w-100"
+                                            id="" cellspacing="0">
+                                            <caption class="sr-only sr-only-focusable">신고유형별현황 발급기관정보</caption>
+                                            <tbody>
+                                                <tr>
+                                                    <th class="col-2 text-center">
+                                                        <span class="">발급기관</span>
+                                                    </th>
+                                                    <td class="col-2">
+                                                    </td>
+                                                    <th class="col-2 text-center">
+                                                        <span class="">발급일자</span>
+                                                    </th>
+                                                    <td>
+                                                    </td>
+                                                    <th class="col-2 text-center">
+                                                        <span class="">전화번호</span>
+                                                    </th>
+                                                    <td>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="col-2 text-center">
+                                                        <span class="">관련서식</span>
+                                                    </th>
+                                                    <td class="col-2">
+                                                    </td>
+                                                    <th class="col-2 text-center">
+                                                        <span class="">관련법령</span>
+                                                    </th>
+                                                    <td>
+                                                    </td>
+                                                    <th class="col-2 text-center">
+                                                        <span class="">유효기간</span>
+                                                    </th>
+                                                    <td>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="col-2 text-center">
+                                                        <span class="">승인조건</span>
+                                                    </th>
+                                                    <td colspan="4">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="col-2 text-center">
+                                                        <span class="">요건확인번호</span>
+                                                    </th>
+                                                    <td class="col-2">
+                                                    </td>
+                                                    <th class="col-2 text-center">
+                                                        <span class="">승인번호</span>
+                                                    </th>
+                                                    <td colspan="3">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="col-2 text-center">
+                                                        <span class="">참고사항</span>
+                                                    </th>
+                                                    <td colspan="4">
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                        <table
+                                            class="table table-light table-bordered ct__table-leftside fixed-max-content-table w-100 text-center"
+                                            id="" cellspacing="0">
+                                            <caption class="sr-only sr-only-focusable">신고유형별현황 모델정보</caption>
+                                            <thead class="bg-light">
+                                                <tr>
+                                                    <th style="width:calc(100% / 11)" scope="col">모델명</th>
+                                                    <th style="width:calc(100% / 11)">품명</th>
+                                                    <th style="width:calc(100% / 11)">핵종</th>
+                                                    <th style="width:calc(100% / 11)">방사능량</th>
+                                                    <th style="width:calc(100% / 11)">단위</th>
+                                                    <th style="width:calc(100% / 11)">HS부호</th>
+                                                    <th style="width:calc(100% / 11)">수량</th>
+                                                    <th style="width:calc(100% / 11)">수량단위</th>
+                                                    <th style="width:calc(100% / 11)">단가</th>
+                                                    <th style="width:calc(100% / 11)">사용기관</th>
+                                                    <th style="width:calc(100% / 11)">용도</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Rv7</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                        <table
+                                            class="table table-light table-bordered ct__table-leftside fixed-max-content-table w-100 text-center"
+                                            id="" cellspacing="0">
+                                            <caption class="sr-only sr-only-focusable">신고유형별현황 모델정보</caption>
+                                            <thead class="bg-light">
+                                                <tr>
+                                                    <th style="width:calc(100% / 4)" scope="col">핵종</th>
+                                                    <th style="width:calc(100% / 4)">수량</th>
+                                                    <th style="width:calc(100% / 4)">소계(mCi)</th>
+                                                    <th style="width:calc(100% / 4)">소계(Mbq)</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Rv7</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                        <table class="table table-light table-bordered ct__table-leftside" id=""
+                                            cellspacing="0">
+                                            <caption class="sr-only sr-only-focusable">신고유형별현황 신고비용</caption>
+                                            <tbody>
+                                                <tr>
+                                                    <th class="col-3 text-center">
+                                                        <span class="">신고비용</span>
+                                                    </th>
+                                                    <td>
+                                                        8,000원
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="col-3 text-center">
+                                                        <span class="">입금계좌</span>
+                                                    </th>
+                                                    <td>
+                                                        우리은행
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                        <table class="table table-light table-bordered ct__table-leftside" id=""
+                                            cellspacing="0">
+                                            <caption class="sr-only sr-only-focusable">신고유형별현황 첨부파일</caption>
+                                            <tbody>
+                                                <tr>
+                                                    <th class="col-3 text-center">
+                                                        <span class="">첨부파일</span>
+                                                    </th>
+                                                    <td>
+                                                        <div class="d-flex align-items-center justify-content-between">
+                                                            <div class="d-flex align-items-center">
+                                                                <span class="mr-3">ARC0116A.JPG(139.07 KB)</span>
+                                                                <button class="btn btn-sm btn-info btn-icon-split">
+                                                                    <span class="icon text-white-50">
+                                                                        <i class="fas fa-download fa-sm"></i>
+                                                                    </span>
+                                                                    <span class="text">다운로드</span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="d-flex align-items-center">
+                                                                <i class="fas fa-download"></i>
+                                                                <span>다운로드 :</span>
+                                                                <span>1164</span>회
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="d-flex align-items-center justify-content-between mt-2">
+                                                            <div class="d-flex align-items-center">
+                                                                <span class="mr-3">ARC0116A.JPG(139.07 KB)</span>
+                                                                <button class="btn btn-sm btn-info btn-icon-split">
+                                                                    <span class="icon text-white-50">
+                                                                        <i class="fas fa-download fa-sm"></i>
+                                                                    </span>
+                                                                    <span class="text">다운로드</span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="d-flex align-items-center">
+                                                                <i class="fas fa-download"></i>
+                                                                <span>다운로드 :</span>
+                                                                <span>1164</span>회
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- 접수중 -->
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <div class="col-12 d-flex justify-content-end">
+                                            <a class="btn btn-dark px-2 mr-2" href="" aria-label="요건확인신고">요건확인신고
+                                                (수입,반입)</a>
+                                            <button class="btn btn-dark px-2 mr-2" type="button"
+                                                aria-label="인쇄하기">인쇄하기</button>
+                                            <button class="btn btn-dark px-2 mr-2" type="button"
+                                                data-target="#modalView01" data-toggle="modal"
+                                                aria-label="사전판별">사전판별</button>
+                                            <button class="btn btn-dark px-2 mr-2" type="button"
+                                                data-target="#modalView02" data-toggle="modal"
+                                                aria-label="반려">반려</button>
+                                            <button class="btn btn-dark px-2 mr-2" type="button"
+                                                data-target="#modalView03" data-toggle="modal"
+                                                aria-label="인허가내역">인허가내역</button>
+                                            <button class="btn btn-dark px-2 mr-2" type="button"
+                                                aria-label="목록">목록</button>
+                                            <button class="btn btn-dark px-2 mr-2" type="button"
+                                                aria-label="삭제">삭제</button>
+                                            <button class="btn btn-dark px-2 mr-2" type="button"
+                                                aria-label="수정">수정</button>
+                                            <button class="btn btn-dark px-2 mr-2" type="button"
+                                                aria-label="검토">검토</button>
+                                        </div>
+                                    </div>
+                                    <!-- 검토중 -->
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <div class="col-12 d-flex justify-content-end">
+                                            <a class="btn btn-dark px-2 mr-2" href="" aria-label="요건확인신고">요건확인신고
+                                                (수입,반입)</a>
+                                            <button class="btn btn-dark px-2 mr-2" type="button"
+                                                aria-label="인쇄하기">인쇄하기</button>
+                                            <button class="btn btn-dark px-2 mr-2" type="button"
+                                                data-target="#modalView01" data-toggle="modal"
+                                                aria-label="사전판별">사전판별</button>
+                                            <button class="btn btn-dark px-2 mr-2" type="button"
+                                                data-target="#modalView02" data-toggle="modal"
+                                                aria-label="반려">반려</button>
+                                            <button class="btn btn-dark px-2 mr-2" type="button"
+                                                data-target="#modalView03" data-toggle="modal"
+                                                aria-label="인허가내역">인허가내역</button>
+                                            <button class="btn btn-dark px-2 mr-2" type="button"
+                                                aria-label="목록">목록</button>
+                                            <button class="btn btn-dark px-2 mr-2" type="button"
+                                                aria-label="수정">수정</button>
+                                            <button class="btn btn-dark px-2 mr-2" type="button"
+                                                aria-label="승인">승인</button>
+                                        </div>
+                                    </div>
+                                    <!-- 반려 -->
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <div class="col-12 d-flex justify-content-end">
+                                            <a class="btn btn-dark px-2 mr-2" href="" aria-label="요건확인신고">요건확인신고
+                                                (수입,반입)</a>
+                                            <button class="btn btn-dark px-2 mr-2" type="button"
+                                                aria-label="인쇄하기">인쇄하기</button>
+                                            <button class="btn btn-dark px-2 mr-2" type="button"
+                                                data-target="#modalView01" data-toggle="modal"
+                                                aria-label="사전판별">사전판별</button>
+                                            <button class="btn btn-dark px-2 mr-2" type="button"
+                                                data-target="#modalView02" data-toggle="modal"
+                                                aria-label="반려">반려</button>
+                                            <button class="btn btn-dark px-2 mr-2" type="button"
+                                                data-target="#modalView03" data-toggle="modal"
+                                                aria-label="인허가내역">인허가내역</button>
+                                            <button class="btn btn-dark px-2 mr-2" type="button"
+                                                aria-label="목록">목록</button>
+                                            <button class="btn btn-dark px-2 mr-2" type="button"
+                                                aria-label="삭제">삭제</button>
+                                            <button class="btn btn-dark px-2 mr-2" type="button"
+                                                aria-label="수정">수정</button>
+                                            <button class="btn btn-dark px-2 mr-2" type="button"
+                                                aria-label="검토">검토</button>
+                                            <button class="btn btn-dark px-2 mr-2" type="button"
+                                                data-target="#modalView04" data-toggle="modal"
+                                                aria-label="반려이력보기">반려이력보기</button>
+                                        </div>
+                                    </div>
+                                    <!-- 승인완료 -->
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <div class="col-12 d-flex justify-content-end">
+                                            <a class="btn btn-dark px-2 mr-2" href="" aria-label="요건확인신고">요건확인신고
+                                                (수입,반입)</a>
+                                            <button class="btn btn-dark px-2 mr-2" type="button"
+                                                aria-label="인쇄하기">인쇄하기</button>
+                                            <button class="btn btn-dark px-2 mr-2" type="button"
+                                                data-target="#modalView01" data-toggle="modal"
+                                                aria-label="사전판별">사전판별</button>
+                                            <button class="btn btn-dark px-2 mr-2" type="button"
+                                                data-target="#modalView02" data-toggle="modal"
+                                                aria-label="반려">반려</button>
+                                            <button class="btn btn-dark px-2 mr-2" type="button"
+                                                data-target="#modalView03" data-toggle="modal"
+                                                aria-label="인허가내역">인허가내역</button>
+                                            <button class="btn btn-dark px-2 mr-2" type="button"
+                                                aria-label="목록">목록</button>
+                                            <button class="btn btn-dark px-2 mr-2" type="button"
+                                                aria-label="수정">수정</button>
+                                            <button class="btn btn-dark px-2 mr-2" type="button"
+                                                aria-label="승인서출력">승인서출력</button>
+                                            <button class="btn btn-dark px-2 mr-2" type="button"
+                                                aria-label="EDI다운">EDI다운</button>
+                                        </div>
+                                    </div>
+                                    <!-- 승인취소신청 -->
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <div class="col-12 d-flex justify-content-end">
+                                            <a class="btn btn-dark px-2 mr-2" href="" aria-label="요건확인신고">요건확인신고
+                                                (수입,반입)</a>
+                                            <button class="btn btn-dark px-2 mr-2" type="button"
+                                                aria-label="인쇄하기">인쇄하기</button>
+                                            <button class="btn btn-dark px-2 mr-2" type="button"
+                                                data-target="#modalView01" data-toggle="modal"
+                                                aria-label="사전판별">사전판별</button>
+                                            <button class="btn btn-dark px-2 mr-2" type="button"
+                                                aria-label="승인취소신청 취소">승인취소신청 취소</button>
+                                            <button class="btn btn-dark px-2 mr-2" type="button"
+                                                data-target="#modalView03" data-toggle="modal"
+                                                aria-label="인허가내역">인허가내역</button>
+                                            <button class="btn btn-dark px-2 mr-2" type="button"
+                                                aria-label="목록">목록</button>
+                                            <button class="btn btn-dark px-2 mr-2" type="button"
+                                                aria-label="수정">수정</button>
+                                            <button class="btn btn-dark px-2 mr-2" type="button"
+                                                aria-label="승인취소">승인취소</button>
+                                            <button class="btn btn-dark px-2 mr-2" type="button"
+                                                data-target="#modalView05" data-toggle="modal"
+                                                aria-label="승인취소 신청서 보기">승인취소 신청서 보기</button>
+                                        </div>
+                                    </div>
+                                    <!-- 승인취소완료 -->
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <div class="col-12 d-flex justify-content-end">
+                                            <a class="btn btn-dark px-2 mr-2" href="" aria-label="요건확인신고">요건확인신고
+                                                (수입,반입)</a>
+                                            <button class="btn btn-dark px-2 mr-2" type="button"
+                                                aria-label="인쇄하기">인쇄하기</button>
+                                            <button class="btn btn-dark px-2 mr-2" type="button"
+                                                data-target="#modalView01" data-toggle="modal"
+                                                aria-label="사전판별">사전판별</button>
+                                            <button class="btn btn-dark px-2 mr-2" type="button"
+                                                data-target="#modalView02" data-toggle="modal"
+                                                aria-label="반려">반려</button>
+                                            <button class="btn btn-dark px-2 mr-2" type="button"
+                                                data-target="#modalView03" data-toggle="modal"
+                                                aria-label="인허가내역">인허가내역</button>
+                                            <button class="btn btn-dark px-2 mr-2" type="button"
+                                                aria-label="목록">목록</button>
+                                            <button class="btn btn-dark px-2 mr-2" type="button"
+                                                aria-label="수정">수정</button>
+                                            <button class="btn btn-dark px-2 mr-2" type="button"
+                                                data-target="#modalView05" data-toggle="modal"
+                                                aria-label="승인취소 신청서 보기">승인취소 신청서 보기</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.container-fluid -->
+            </div>
+            <!-- End of Main Content -->
+        </div>
+        <!-- End of Content Wrapper -->
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modalView01" tabindex="-1" role="dialog" data-backdrop="static"
+        aria-labelledby="modalView01Title" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+            <div class="modal-content w-100 mw-100">
+                <div class="modal-header bg-gradient-primary">
+                    <h5 class="modal-title text-white" id="modalView01Title">판별정보 조회(검토항목)</h5>
+                    <button class="close text-white" type="button" data-dismiss="modal" aria-label="모달 닫기">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="card">
+                        <div class="card-body bg-light">
+                            <div class="d-flex flex-column">
+                                <span class="mb-1">※방사성동위원소 등 사전 판별은 ~</span>
+                                <span class="mb-1">※방사성동위원소 등 사전 판별은 ~</span>
+                                <span>※방사성동위원소 등 사전 판별은 ~</span>
+                            </div>
+                        </div>
+                        <hr class="m-0">
+                        <div class="card-body">
+                            <div class="table-responsive mb-4">
+                                <table class="table table-sm table-light mb-0" id="" cellspacing="0">
+                                    <caption class="sr-only sr-only-focusable">품명 조회</caption>
+                                    <thead class="font-weight-bold text-white bg-gradient-primary">
+                                        <tr class="text-center">
+                                            <th scope="col">판별여부</th>
+                                            <th scope="col">대분류</th>
+                                            <th scope="col" colspan="6">수출입요건확인 세부 검토 항목</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="text-center">
+                                        <tr>
+                                            <td style="width:150px" scope="row">
+                                                <div class="d-flex justify-content-center">
+                                                    <div class="custom-control custom-radio mr-3">
+                                                        <input class="custom-control-input" type="radio"
+                                                            name="inlineRadioUsageOptions" id="radio1" value="" checked>
+                                                        <label class="custom-control-label" for="radio1">적합</label>
+                                                    </div>
+                                                    <div class="custom-control custom-radio">
+                                                        <input class="custom-control-input" type="radio"
+                                                            name="inlineRadioUsageOptions" id="radio2" value="">
+                                                        <label class="custom-control-label" for="radio2">부적합</label>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>인보이스/선적내역</div>
+                                            </td>
+                                            <td>
+                                                <div>인보이스 송하인, 선적항 상이</div>
+                                                <p class="btn btn-danger btn-sm m-0 mt-2">확인</p>
+                                            </td>
+                                            <td>
+                                                <div>인보이스 송하인, 선적항 상이</div>
+                                            </td>
+                                            <td>
+                                                <div>인보이스 송하인, 선적항 상이</div>
+                                            </td>
+                                            <td>
+                                                <div>인보이스 송하인, 선적항 상이</div>
+                                            </td>
+                                            <td>
+                                                <div>인보이스 송하인, 선적항 상이</div>
+                                            </td>
+                                            <td>
+                                                <div>인보이스 송하인, 선적항 상이</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width:150px" scope="row">
+                                                <div class="d-flex justify-content-center">
+                                                    <div class="custom-control custom-radio mr-3">
+                                                        <input class="custom-control-input" type="radio"
+                                                            name="inlineRadioUsageOptions1" id="radio1_1" value=""
+                                                            checked>
+                                                        <label class="custom-control-label" for="radio1_1">적합</label>
+                                                    </div>
+                                                    <div class="custom-control custom-radio">
+                                                        <input class="custom-control-input" type="radio"
+                                                            name="inlineRadioUsageOptions1" id="radio1_2" value="">
+                                                        <label class="custom-control-label" for="radio1_2">부적합</label>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>인보이스/선적내역</div>
+                                            </td>
+                                            <td>
+                                                <div>인보이스 송하인, 선적항 상이</div>
+                                                <p class="btn btn-danger btn-sm m-0 mt-2">확인</p>
+                                            </td>
+                                            <td>
+                                                <div>인보이스 송하인, 선적항 상이</div>
+                                            </td>
+                                            <td>
+                                                <div></div>
+                                            </td>
+                                            <td>
+                                                <div></div>
+                                            </td>
+                                            <td>
+                                                <div></div>
+                                            </td>
+                                            <td>
+                                                <div></div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="d-flex justify-content-end mb-2">
+                                <button class="btn btn-danger px-2 mr-2" type="button" aria-label="성능분류">성능분류</button>
+                                <button class="btn btn-dark px-2" type="button" data-target="#modalView02"
+                                    data-toggle="modal" aria-label="반려">반려</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 반려 모달 -->
+    <div class="modal fade" id="modalView02" tabindex="-1" role="dialog" data-backdrop="static"
+        aria-labelledby="modalView02Title" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+            <div class="modal-content w-100 mw-100">
+                <div class="modal-header bg-gradient-primary">
+                    <h5 class="modal-title text-white" id="modalView02Title">반려</h5>
+                    <button class="close text-white" type="button" data-dismiss="modal" aria-label="모달 닫기">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="card">
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-primary">신고 정보</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-light table-bordered ct__table-leftside mb-0 text-center"
+                                    id="" cellspacing="0">
+                                    <caption class="sr-only sr-only-focusable">신고 정보</caption>
+                                    <tbody>
+                                        <tr>
+                                            <th class="col-2">
+                                                <span class="">접수번호</span>
+                                            </th>
+                                            <td class="col-4">
+                                                2022101223
+                                            </td>
+                                            <th class="col-2">
+                                                <span class="">진행상태</span>
+                                            </th>
+                                            <td class="col-4">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="col-2">
+                                                <span class="">접수일</span>
+                                            </th>
+                                            <td class="col-4">
+                                                2022101223
+                                            </td>
+                                            <th class="col-2">
+                                                <span class="">신고구분</span>
+                                            </th>
+                                            <td class="col-4">
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mt-3">
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-primary">반려 사유 등록</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive mb-4">
+                                <table class="table table-light table-bordered ct__table-leftside mb-0 text-center"
+                                    id="" cellspacing="0">
+                                    <caption class="sr-only sr-only-focusable">반려 사유 등록</caption>
+                                    <tbody>
+                                        <tr>
+                                            <th class="col-2">
+                                                <span class="">반려 사유</span>
+                                            </th>
+                                            <td>
+                                                <textarea class="form-control" id="exampleFormControlTextarea1"
+                                                    rows="3"></textarea>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="d-flex justify-content-end mb-2">
+                                <button class="btn btn-dark px-2 mr-2" type="button" aria-label="저장">저장</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 인허가내역 -->
+    <div class="modal fade" id="modalView03" tabindex="-1" role="dialog" data-backdrop="static"
+        aria-labelledby="modalView03Title" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+            <div class="modal-content w-100 mw-100">
+                <div class="modal-header bg-gradient-primary">
+                    <h5 class="modal-title text-white" id="modalView03Title">인허가내역</h5>
+                    <button class="close text-white" type="button" data-dismiss="modal" aria-label="모달 닫기">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="card">
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-primary">기관 정보</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-light table-bordered ct__table-leftside mb-0 text-center"
+                                    id="" cellspacing="0">
+                                    <caption class="sr-only sr-only-focusable">기관 정보</caption>
+                                    <tbody>
+                                        <tr>
+                                            <th class="col-2">
+                                                <span class="">업태</span>
+                                            </th>
+                                            <td class="col-4">
+                                                도매, 서비스
+                                            </td>
+                                            <th class="col-2">
+                                                <span class="">종목</span>
+                                            </th>
+                                            <td class="col-4">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="col-2">
+                                                <span class="">사업자등록번호</span>
+                                            </th>
+                                            <td class="col-4">
+                                                1288181601
+                                            </td>
+                                            <th class="col-2">
+                                                <span class="">대표자명</span>
+                                            </th>
+                                            <td class="col-4">
+                                                김순배
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="col-2">
+                                                <span class="">전화번호</span>
+                                            </th>
+                                            <td class="col-4">
+                                            </td>
+                                            <th class="col-2">
+                                                <span class="">FAX</span>
+                                            </th>
+                                            <td class="col-4">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="col-2">
+                                                <span class="">주소</span>
+                                            </th>
+                                            <td class="col-4">
+                                            </td>
+                                            <th class="col-2">
+                                                <span class="">우편번호</span>
+                                            </th>
+                                            <td class="col-4">
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mt-3">
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-primary">발생장치 판매 허가 내역</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive mb-4">
+                                <table class="table table-light table-bordered ct__table-leftside text-center" id=""
+                                    cellspacing="0">
+                                    <caption class="sr-only sr-only-focusable">발생장치 판매 허가 내역</caption>
+                                    <thead class="bg-light">
+                                        <tr>
+                                            <th scope="col">허가종류</th>
+                                            <th>발생장치</th>
+                                            <th>최대전압</th>
+                                            <th>전압단위</th>
+                                            <th>최대전류</th>
+                                            <th>전류단위</th>
+                                            <th>허가수량</th>
+                                            <th>변경사유</th>
+                                            <th>폐기일자</th>
+                                            <th>등록일자</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>RG판매허가</td>
+                                            <td>엑스선발생장치</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 반려이력보기 -->
+    <div class="modal fade active-modal" id="modalView04" tabindex="-1" role="dialog" data-backdrop="static"
+        aria-labelledby="modalView04Title" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+            <div class="modal-content w-100 mw-100">
+                <div class="modal-header bg-gradient-primary">
+                    <h5 class="modal-title text-white" id="modalView04Title">반려이력보기</h5>
+                    <button class="close text-white" type="button" data-dismiss="modal" aria-label="모달 닫기">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="card">
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-primary">신고 정보</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-light table-bordered ct__table-leftside mb-0 text-center"
+                                    id="" cellspacing="0">
+                                    <caption class="sr-only sr-only-focusable">신고 정보</caption>
+                                    <tbody>
+                                        <tr>
+                                            <th class="col-2">
+                                                <span class="">접수번호</span>
+                                            </th>
+                                            <td class="col-4">
+                                                2022101223
+                                            </td>
+                                            <th class="col-2">
+                                                <span class="">진행상태</span>
+                                            </th>
+                                            <td class="col-4">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="col-2">
+                                                <span class="">접수일</span>
+                                            </th>
+                                            <td class="col-4">
+                                                2022101223
+                                            </td>
+                                            <th class="col-2">
+                                                <span class="">신고구분</span>
+                                            </th>
+                                            <td class="col-4">
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mt-3">
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-primary">발생장치 판매 허가 내역</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-light table-bordered ct__table-leftside" id=""
+                                    cellspacing="0">
+                                    <caption class="sr-only sr-only-focusable">발생장치 판매 허가 내역</caption>
+                                    <thead class="bg-light text-center">
+                                        <tr>
+                                            <th scope="col">대분류</th>
+                                            <th>검토항목</th>
+                                            <th>재단의 반려 사유</th>
+                                            <th>기관의 보완 의견</th>
+                                            <th>반려 일시</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>기타</td>
+                                            <td>기타</td>
+                                            <td>해당 건은 반려하오니 사용기관이 변경되면</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="d-flex justify-content-end">
+                                <button class="btn btn-dark px-2" type="button" aria-label="닫기" data-dismiss="modal">닫기</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="../assets/vendor/jquery/jquery.min.js"></script>
+    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="../assets/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="../assets/js/sb-admin-2.js"></script>
+
+    <!-- Page level plugins -->
+
+    <!-- Page level custom scripts -->
+
+</body>
+
+</html>

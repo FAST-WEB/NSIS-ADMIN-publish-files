@@ -1,0 +1,221 @@
+@charset "utf-8";
+
+/* 서브 table 디자인 */
+
+/* 페이징 */
+.paging {position:relative; text-align:center; margin:30px 0 0}
+.paging span {display:inline-block; width:26px; height:28px; margin-right:5px; line-height:28px; text-align:center; font-size:13px; color:#707070; vertical-align:top; border:solid 1px #e9e7e7; background:#fff}
+.paging span:hover {color:#505050; text-decoration: underline; background: #f5f5f5}
+.paging a {display:inline-block; width:26px; height:28px; margin-right:0px; line-height:28px; text-align:center; font-size:13px; color:#707070; vertical-align:top; border:solid 1px #e9e7e7; background:#fff}
+.paging a:hover {color:#505050; text-decoration: underline; background: #f5f5f5}
+.paging .on{display:inline-block; width:26px; height:28px; line-height:28px; text-align:center; vertical-align:top; font-size:13px; color:#fff; font-weight:bold; background:#9b9b9b; border:solid 1px #9b9b9b}
+
+.paging .btn{margin:0 10px}
+.paging .hide{width:26px; background:#fff; font-size:0; border:solid 1px #d5d5d5; text-indent:-9999px;}
+.paging .prevEnd, .prevEnd:hover {background: url('../img/sub/paging_prev2.png') no-repeat center center !important}
+.paging .prev, .prev:hover {background: url('../img/sub/paging_prev.png') no-repeat center center !important}
+.paging .next, .next:hover {background: url('../img/sub/paging_next.png') no-repeat center center !important}
+.paging .nextEnd, .nextEnd:hover {background: url('../img/sub/paging_next2.png') no-repeat center center !important}
+
+/*** 신청현황등 일반 리스트 ***/
+.list_type01 {clear:both;border-top:solid 2px #4e73df;border-bottom:none;overflow:hidden}
+.list_type01 table {clear:both;width:100%; border-top:solid 1px #fff;border-collapse:separate}
+.list_type01 table tr:hover {background:#f9f9f9 /*#fff8c8 #fffdcc #ffefdd*/ !important}
+.list_type01 table th {padding:7px 6px;border-right:solid 1px #e2e2e2;border-bottom:solid 1px #aaa;background:linear-gradient(#f5f5f5, #fff) repeat;font-size:14px;font-weight:bold;color:#333;text-align:center;letter-spacing:-.5px}
+.list_type01 table th:first-child, .list_type01 table td:first-child {border-left:none}
+.list_type01 table th a {font-size:13px;font-weight:bold;color:#333}
+.list_type01 table th a:hover {text-decoration: underline}
+.list_type01 table td {padding:6px 6px 6px 12px;border-right:solid 1px #e2e2e2;border-bottom:solid 1px #e2e2e2; line-height:22px;letter-spacing:-.3px;color:#454545;font-size:14px}
+.list_type01 table td a {color:#454545 /*#0481c6 ; font-weight: bold*/}
+.list_type01 table td a:hover {color:#0481c6}
+.list_type01 table .last {border-right:0; padding-right:35px}
+/*
+.list_type01 table tr:nth-child(odd) {background:#f8f8f8}
+.list_type01 table tr:nth-child(even) {background:#fff}
+*/
+
+/*** 신청현황등 상세 페이지 ***/
+.detail_type01 {clear:both;border-top:solid 2px #382b23;border-bottom:none;overflow:hidden}
+.detail_type01 table {clear:both;width:100%; border-top:solid 1px #fff;border-collapse:separate}
+.detail_type01 table th {padding:7px 6px;border-bottom:solid 1px #ddd;background:#f5f5f5;font-size:13px;font-weight:bold;color:#333;text-align:center;letter-spacing:-.5px}
+.detail_type01 table td {position:relative;padding:6px 6px 6px 20px;text-align: center;border-bottom:solid 1px #e2e2e2; text-align:left;line-height:20px;letter-spacing:-.3px;color:#454545;font-size:13px}
+.detail_type01 table td a {color:#333}
+
+
+/*** 코드관리 리스트 ***/
+.list_type02 {clear:both;border-top:solid 2px #382b23;border-bottom:none;overflow:hidden}
+.list_type02 table {clear:both;width:100%; border-top:solid 1px #fff;border-collapse:separate}
+.list_type02 table tr:hover {background:#f9f9f9 !important}
+.list_type02 table tr.on {background:#f9f9f9 !important}
+.list_type02 table th {padding:7px 6px;border-bottom:solid 1px #aaa;border-left:solid 1px #ddd;background:linear-gradient(#f5f5f5, #fff) repeat;font-size:13px;font-weight:bold;color:#333;text-align:center;letter-spacing:-.5px;cursor:pointer}
+.list_type02 table th:first-child, .list_type02 table td:first-child {border-left:none}
+.list_type02 table th a {font-size:13px;font-weight:bold;color:#333}
+.list_type02 table th a:hover {text-decoration: underline}
+.list_type02 table td {padding:6px 6px 6px 12px;text-align: center; border-bottom:solid 1px #e2e2e2; border-left:solid 1px #e2e2e2;line-height:22px;letter-spacing:-.3px;color:#454545;font-size:12px;cursor:pointer}
+.list_type02 table td a {color:#454545}
+.list_type02 table td a:hover {color:#0481c6}
+
+
+/*** 수출입 통계 리스트 상단 ***/
+.list_type03 {
+    font-weight: bold;
+    clear: both;
+    position: relative;
+    border-top: solid 2px #4e73df;
+    clear: both;
+    border-bottom: none;
+    margin-bottom: 1.5em;
+}
+.list_type03 a{color:#4e73df;}
+.list_type03 table{width:100%;border-collapse:separate;}
+.list_type03 table td {height:34px;padding:10px;text-align: center; border-bottom:solid 1px #ddd; border-left:solid 1px #ddd;line-height:22px;letter-spacing:-.3px;color:#454545;font-size:14px;cursor:pointer; line-height:17px; margin-top:0;}
+.list_type03 button{font-weight:bold; color:#4e73df; padding:5px 35px;}
+.list_type03 .br{border-right:solid 1px #ddd;}
+.list_type03 .active{background:#4e73df;color:#fff;}
+.list_type03 .active a{color:#fff;}
+
+/* 수출입통계 사선표현 */
+.slash{background:url('../img/sub/slash.png') no-repeat center!important;}
+
+/*
+.list_type03 table td:first-child {border-left:none}
+.link_data {background: url(../img/sub/icon_down.png) no-repeat right center;padding-right:20px}
+*/
+
+/* 수출입통계 - 년도 */
+/*
+.year{margin:0 auto; height:auto; position:relative;}
+.year_tab {position:relative;width:100%;}
+.year_tab{width:100%; margin:0 auto;}
+.year_tab li{float:left; width:100px; height:30px; background:#fff;text-align:center; vertical-align:middle; font-size:15px;line-height:19px; border:1px solid #ddd; margin-right:5px; display:inline-block;padding:2px 5px; border-bottom:1px solid #ddd;border-top-left-radius:17px;border-top-right-radius:17px;border-bottom:none;}
+.year_tab li a{width:100%; color:#7d7d7d;}
+.year_tab li:first-child{margin-left:5px;}
+.year_tab .on{display:inline-block;}
+.year_tab .off{display:none;}*/
+
+
+.year{margin:0 auto; height:38px;position:relative;}
+.year_tab {position:relative;width:100%;}
+.year_tab {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 22px;
+}
+.year_tab li{float:left; width:100px; height:35px; background:#fff;text-align:center;
+vertical-align:middle; font-size:14px;line-height:35px; border:1px solid #ddd; margin-right:5px;
+display:inline-block;padding:2px; border-bottom:1px solid #ddd;border-top-left-radius:17px;
+border-top-right-radius:17px;border-bottom:none;}
+.year_tab li a{width:100%; color:#7d7d7d;}
+
+/* .year_tab .active a {color:#fff !important;} */
+.year_tab .active .on {color:#fff !important;}
+.year_tab li .on {color:#7d7d7d !important;}
+.year_tab a .active{color:#fff !important;}
+.year_tab li:first-child{margin-left:5px;}
+.year_tab .on{display:inline-block;}
+.year_tab .off{display:none;}
+.year_tab .linkW{color:#fff;}
+.year_tab .linkW:hover{color:#fff;}
+
+.year .prev, .year .prev:hover {background:url('/img/sub/year_left_btn.png') no-repeat center 4px !important; display:inline-block;width:41px;height:41px; text-align:right !important; float:left;vertical-align:middle;margin-left:5px;margin-right:5px;}
+.year .next, .year .next:hover {background: url('/img/sub/year_right_btn.png') no-repeat center 4px !important; display:inline-block;width:41px;height:41px;text-align:left !important; float:right;vertical-align:middle;margin-right:5px;}
+.year_tab .active{font-weight:bold; background:#4e73df; color:#fff;}
+
+
+/*** 팝업창 사전판별 리스트 ***/
+.list_type04 {clear:both;border-top:solid 2px #382b23;border-bottom:none;overflow:hidden}
+.list_type04 table {clear:both;width:100%;border-top:solid 1px #fff;border-collapse:separate}
+.list_type04 table th {padding:6px 6px 8px 6px;border-left:1px solid #c6d6dc;border-bottom:solid 1px #c6d6dc;background:linear-gradient(#ddedf3, #fff) repeat;font-size:14px;font-weight:bold;color:#035679;text-align:center;letter-spacing:-.5px}
+.list_type04 table th:first-child, .list_type04 table td:first-child{border-left:none}
+.list_type04 table th a {font-size:13px;font-weight:bold;color:#333}
+.list_type04 table th a:hover {text-decoration: underline}
+.list_type04 table td {padding:4px 6px 4px 6px;border-left:1px solid #c6d6dc;border-bottom:solid 1px #c6d6dc;line-height:22px;letter-spacing:-.3px;color:#333;font-size:12px;white-space: normal !important;word-wrap: break-word }
+.list_type04 table td a {color:#333}
+.list_type04 table td.on {background: #37a15c}
+.list_type04 table td.on2 {background: #fff}
+.list_type04 table td.on span {color:#fff !important}
+.list_type04 input[type="radio"] {margin-right:1px}
+.td_bgcolor01 {background:#eaf3f7;font-weight:bold;color:#111 !important}
+.td_bgcolor02 {background:#e8e8e8;font-weight:bold;color:#111 !important}
+
+.btn_view {display:block;height:20px;margin:0 auto;line-height:16px;margin-top:3px;padding:0 10px 3px 10px;border-radius: 2px;background:#ed4221;font-weight: bold;font-size: 11px; color:#fff;letter-spacing: 0.5px}
+.btn_view:hover {color:#fff;background: #e22e0b;text-decoration: none}
+
+
+/*** 팝업창 발생장치 리스트 ***/
+.list_type05 {clear:both;border-bottom:none;overflow:hidden}
+.list_type05 table {clear:both;width:100%;border-top:solid 2px #3495d9}
+.list_type05 table th {padding:3px 6px 4px 6px;border-left:1px solid #ccc;border-bottom:solid 1px #ccc;background:linear-gradient(#f2faff, #fff) repeat;font-size:12px;font-weight:bold;color:#222;text-align:center;letter-spacing:-.5px}
+.list_type05 table th:first-child, .list_type05 table td:first-child{border-left:none}
+.list_type05 table th a {color:#333}
+.list_type05 table th a:hover {text-decoration: underline}
+.list_type05 table td {padding:4px 8px 4px 8px;border-left:1px solid #ddd;border-bottom:solid 1px #ddd;background: #e1f3ff; line-height:22px;letter-spacing:-.3px;color:#333;font-size:12px}
+
+.list_type06 {clear:both;border-bottom:none;overflow:hidden}
+.list_type06 table {clear:both;width:100%;border-top:solid 2px #999}
+.list_type06 table th {padding:3px 6px 4px 6px;border-left:1px solid #ccc;border-bottom:solid 1px #ccc;background:linear-gradient(#f0f0f0, #fff) repeat;font-size:12px;font-weight:bold;color:#222;text-align:center;letter-spacing:-.5px}
+.list_type06 table th:first-child, .list_type05 table td:first-child{border-left:none}
+.list_type06 table th a {color:#333}
+.list_type06 table th a:hover {text-decoration: underline}
+.list_type06 table td {padding:4px 8px 4px 8px;border-left:1px solid #ddd;border-bottom:solid 1px #ddd;background: #fff; line-height:22px;letter-spacing:-.3px;color:#333;font-size:12px}
+
+
+/*** 팝업창 변경 내역 확인 ***/
+.list_type07 {clear:both;border-top:solid 2px #382b23;border-bottom:none;overflow:hidden}
+.list_type07 table {clear:both;width:100%; border-top:solid 1px #fff;border-collapse:separate}
+.list_type07 table tr:hover {background:#fffee3;color:#222}
+.list_type07 table th {padding:3px 6px 4px 6px;border-bottom:solid 1px #aaa;border-left:solid 1px #aaa;background:linear-gradient(#f5f5f5, #fff) repeat;font-size:13px;font-weight:bold;color:#333;text-align:center;letter-spacing:-.5px}
+.list_type07 table th:first-child, .list_type07 table td:first-child {border-left:none}
+.list_type07 table td {padding:4px 8px 4px 8px;border-bottom:solid 1px #e2e2e2; border-left:solid 1px #e2e2e2;text-align:center;line-height:22px;letter-spacing:-.3px;color:#454545;font-size:12px;cursor: pointer}
+
+/*** 리스트 디자인 기본 ***/
+.list_type08 {clear:both;border-top:solid 2px #382b23;border-bottom:none;overflow:hidden}
+.list_type08 table {clear:both;width:100%; border-top:solid 1px #fff;border-collapse:separate}
+.list_type08 table th {padding:3px 6px 4px 6px;border-bottom:solid 1px #bbb;border-left:solid 1px #bbb;background:#f0f7fc;font-size:12px;font-weight:bold;color:#333;text-align:center;letter-spacing:-.5px}
+.list_type08 table th:first-child, .list_type08 table td:first-child {border-left:none}
+.list_type08 table td {padding:4px 8px 4px 8px;border-bottom:solid 1px #e2e2e2; border-left:solid 1px #e2e2e2;text-align:center;line-height:22px;letter-spacing:-.3px;color:#454545;font-size:12px}
+
+
+/*** 요건면제신고서 ***/
+.list_type09 {clear:both;border-top:solid 2px #382b23;border-bottom:none;overflow:hidden}
+.list_type09 table {clear:both;width:100%;border-top:solid 1px #fff;border-collapse:separate}
+.list_type09 table th {padding:10px;border-left:1px solid #c6d6dc;border-bottom:solid 1px #c6d6dc;background:linear-gradient(#ddedf3, #fff) repeat;font-size:14px;font-weight:bold;color:#035679;text-align:center;letter-spacing:-.5px}
+.list_type09 table th:first-child, .list_type09 table td:first-child{border-left:none}
+.list_type09 table td {padding:15px;border-left:1px solid #c6d6dc;border-bottom:solid 1px #c6d6dc;line-height:22px;letter-spacing:-.3px;color:#454545;font-size:12px}
+.list_type09 table td a {color:#333}
+.list_type09 input[type="radio"] {margin-left:3px}
+
+
+/*** 리스트 yscroll ***/
+.yscroll.attachedTableList.h292 {top:3px; position:relative;}
+.list_type10 {clear:both;border-top:solid 2px #555;width:100%;border-collapse:separate;border-bottom:none;overflow:hidden;display: inline-table;}
+.list_type10_scrollBox {display: inline-table; min-width:100%;}
+.bbs_default.view1 .list_type10_scrollBox tr:hover {background:#f9f9f9 !important;}
+.list_type10 th {padding:4px 6px 5px 6px;border-bottom:solid 1px #555;background:linear-gradient(#f2faff, #fff) repeat;font-size:12px;font-weight:bold;color:#333;text-align:center;letter-spacing:-.5px}
+.list_type10 th:first-child, .list_type10 td:first-child {border-left:none}
+.list_type10 td {padding:4px 8px 4px 8px;border-bottom:solid 1px #e2e2e2; text-align:center;line-height:22px;letter-spacing:-.3px;color:#454545;font-size:12px}
+
+.spanEmailCont {color:#0481c6;}
+
+.apply_back_type0 {width:480px;height:54px; text-align:left  !important;  background:#ffffff;padding:0 !important; }
+.apply_back_type1 {width:480px;height:54px; text-align:left  !important; background: url('/images/cyberline/rpms/contents/step01.png'); background-repeat: no-repeat; padding:0 0 0 0 !important;}
+.apply_back_type2 {width:480px;height:54px; text-align:left !important; background: url('/images/cyberline/rpms/contents/step02.png'); background-repeat: no-repeat;padding:0 0 0 0 !important;}
+.apply_back_type3 {width:480px;height:54px; text-align:left !important; background: url('/images/cyberline/rpms/contents/step03.png'); background-repeat: no-repeat;padding:0 0 0 0 !important;}
+.apply_back_type4 {width:480px;height:54px; text-align:left !important; background: url('/images/cyberline/rpms/contents/step04.png'); background-repeat: no-repeat;padding:0 0 0 0 !important;}
+.apply_back_type5 {width:480px;height:54px; text-align:left !important; background: url('/images/cyberline/rpms/contents/step05.png'); background-repeat: no-repeat;padding:0 0 0 0 !important;}
+.apply_back_type6 {width:480px;height:54px; text-align:left !important; background: url('/images/cyberline/rpms/contents/step06.png'); background-repeat: no-repeat;padding:0 0 0 0 !important;}
+.apply_back_type7 {width:480px;height:54px; text-align:left !important; background: url('/images/cyberline/rpms/contents/step07.png'); background-repeat: no-repeat;padding:0 0 0 0 !important;}
+
+
+.apply_back_type3_rej {width:480px;height:54px; text-align:left !important; background: url('/images/cyberline/rpms/contents/step03_rej.png'); background-repeat: no-repeat;padding:0 0 0 0 !important;}
+.span_text1 { text-align:center !important; display: table-cell; vertical-align: middle; border:0px solid red; display:inline-block; width:69px !important;font-weight:bold;padding-left:5px;}
+.span_text2 { text-align:center !important; vertical-align:middle !important;border:0px solid red; display:inline-block; width:70px !important;font-weight:bold;margin-left:-1px;}
+.span_text3 { text-align:center !important; vertical-align:middle !important;border:0px solid red; display:inline-block; width:70px !important;font-weight:bold;margin-left:-1px;}
+.span_text4 { text-align:center !important; vertical-align:middle !important;border:0px solid red; display:inline-block; width:68px !important;color:white;font-weight:bold;margin-left:-1px;}
+.span_text5 { text-align:center !important; vertical-align:middle !important;border:0px solid red; display:inline-block; width:67px !important;color:white;font-weight:bold;margin-left:-1px;}
+.span_text6 { text-align:center !important; vertical-align:middle !important;border:0px solid red; display:inline-block; width:65px !important;color:white;font-weight:bold;margin-left:-1px;}
+.span_text7 { text-align:center !important; vertical-align:middle !important;border:0px solid red; display:inline-block; width:65px !important;font-weight:bold;margin-left:-1px;}
+
+
+.divStat .tdbg01 {height:10px !important;padding:0 !important;border:none  !important;}
+.divStat .rep_title {border-top:1px solid #ddd;}
